@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>tinygames</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+
+
+
+<h1>Welcome to the tinygames Collection</h1>
+
+<div id="readme-content">
+    <!-- README.md content will be loaded here -->
+</div>
+
+
+
+
+<nav>
+    <ul>
+        <li><a href="tinygame1/index.html">tinygame1</a>(<a href="tinygame1/README.md">read about it</a>)</li>
+    </ul>
+</nav>
+
+
+<script>
+    fetch('README.md')
+        .then(response => response.text())
+        .then(text => {
+            const readmeContent = document.getElementById('readme-content');
+            readmeContent.innerHTML = marked.parse(text);
+        });
+</script>
+
+</body>
+</html>
