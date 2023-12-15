@@ -1,0 +1,7 @@
+/*
+make images responsive
+just a quickfix. maybe I missed something..
+ */
+img {
+    max-width: 100%;
+}
